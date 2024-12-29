@@ -1,0 +1,16 @@
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\AtlyssEmotes.deps.json
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\AtlyssEmotes.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\AtlyssEmotes.pdb
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\EasySettings.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\UnityEngine.UI.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Mirror.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.csproj.AssemblyReference.cache
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\MyPluginInfo.cs
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.AssemblyInfoInputs.cache
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.AssemblyInfo.cs
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.csproj.CoreCompileInputs.cache
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.csproj.CopyComplete
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.pdb
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Assembly-CSharp-nstrip.dll
