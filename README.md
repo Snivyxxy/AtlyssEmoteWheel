@@ -8,3 +8,7 @@ Put the AtlyssEmotes folder into the Bepinex Plugins folder.
 - Add support for custom emotes
 - Allow rearrangement of the wheel's emotes
 - Add controller support
+
+##Where's the Usable Mod?
+https://thunderstore.io/c/atlyss/p/SnivyXXY/Atlyss_Emote_Wheel/
+I'm lazy so I don't put the finished mod here.
