@@ -155,9 +155,27 @@ public class WheelBehavior : MonoBehaviour
         {
             Debug.Log(Emotes.list[index].emoteString);
         }
-        else
+        else if(chat._emoteBuffer <= 0f)
         {
-            chat.Cmd_SendChatMessage(Emotes.list[index].emoteString, ChatBehaviour.ChatChannel.ROOM);
+            //rework
+            EmoteCommand foundEmote = null;
+
+            foreach(EmoteCommand e in chat._scriptableEmoteList._emoteCommandList)
+            {
+                if (Emotes.list[index].emoteString == e._emoteChatCommand)
+                {
+                    foundEmote = e;
+                    break;
+                }
+            }
+
+            if(foundEmote == null)
+            {
+                return;
+            }
+
+            chat._player._pVisual.Cmd_CrossFadeAnim(foundEmote._emoteAnimationTag, 0.1f, 11);
+            chat._emoteBuffer = 0.85f;
         }
     }
 
