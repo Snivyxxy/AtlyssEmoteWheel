@@ -28,19 +28,19 @@
   
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\Atlyss Decompiled Project\atlyssorigstripped\Assembly-CSharp-nstrip.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Steam\steamapps\common\ATLYSS\Disabled\Stripped\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx">
       <HintPath>..\..\Modders Ultrakill\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
     <Reference Include="EasySettings">
-      <HintPath>..\..\..\..\Downloads\EasySettings.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Steam\steamapps\common\ATLYSS\BepInEx\plugins\EasySettings.dll</HintPath>
     </Reference>
     <Reference Include="Mirror">
-      <HintPath>..\..\Atlyss Decompiled Project\atlyssorigstripped\ATLYSS_Data\Managed\Mirror.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Steam\steamapps\common\ATLYSS\Disabled\Stripped\Mirror.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\Atlyss Decompiled Project\atlyssorigstripped\ATLYSS_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Steam\steamapps\common\ATLYSS\Disabled\Stripped\UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

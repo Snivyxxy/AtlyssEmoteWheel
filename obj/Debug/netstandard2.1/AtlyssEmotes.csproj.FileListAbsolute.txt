@@ -13,4 +13,11 @@ C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandar
 C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.csproj.CopyComplete
 C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.dll
 C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\obj\Debug\netstandard2.1\AtlyssEmotes.pdb
-C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Assembly-CSharp-nstrip.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Assembly-CSharp.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\com.rlabrecque.steamworks.net.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Unity.TextMeshPro.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Mirror.Components.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Mirror.Transports.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\Telepathy.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\SimpleWebTransport.dll
+C:\Users\account\OneDrive\Desktop\AtlyssEmotes\AtlyssEmotes\bin\Debug\netstandard2.1\kcp2k.dll

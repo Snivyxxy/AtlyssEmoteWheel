@@ -55,8 +55,6 @@ public class WheelBehavior : MonoBehaviour
             Cursor.visible = true;
             CameraFunction._current._unlockedCamera = true;
 
-            //crude: fix later
-            InGameUI._current._escapeMenuElement.isEnabled = false;
 
             openProgress = Mathf.Lerp(openProgress, 1f, 1f - Mathf.Pow(1 - (1 / LerpSpeed), Time.deltaTime));
 
@@ -108,8 +106,7 @@ public class WheelBehavior : MonoBehaviour
                     CameraFunction._current._unlockedCamera = false;
                 }
             }
-            if (SettingsManager._current._isOpen || DialogManager._current._isDialogEnabled || TabMenu._current._isOpen
-                || InGameUI._current._escapeMenuElement.isEnabled)
+            if (SettingsManager._current._isOpen || DialogManager._current._isDialogEnabled || TabMenu._current._isOpen)
             {
                 active = false;
             }
@@ -160,7 +157,7 @@ public class WheelBehavior : MonoBehaviour
         }
         else
         {
-            chat.Cmd_SendChatMessage(Emotes.list[index].emoteString, ChatBehaviour.ChatChannel.ZONE);
+            chat.Cmd_SendChatMessage(Emotes.list[index].emoteString, ChatBehaviour.ChatChannel.ROOM);
         }
     }
 
@@ -168,7 +165,7 @@ public class WheelBehavior : MonoBehaviour
     [HarmonyPatch]
     class Patches
     {
-        [HarmonyPatch(typeof(PlayerCombat), "<Init_Attack>g__AbleToInitAttack|102_0")]
+        [HarmonyPatch(typeof(PlayerCombat), "<Init_Attack>g__AbleToInitAttack|101_0")]
         [HarmonyPostfix]
         static void PatchCanAttack(ref bool __result)
         {

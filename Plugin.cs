@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using System.Reflection;
 using UnityEngine;
 
 namespace AtlyssEmotes;
@@ -33,7 +34,7 @@ public class Plugin : BaseUnityPlugin
         EmoteWheelSettings.Awake();
 
         Harmony harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
-        harmony.PatchAll();
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
 
         AssetHandler.GetAssetBundles();
     }
