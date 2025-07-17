@@ -230,7 +230,7 @@ namespace AtlyssEmotes
                 graph.Destroy();
             }
         }
-
+        
         [HarmonyPatch]
         static class Patches
         {
@@ -264,6 +264,11 @@ namespace AtlyssEmotes
             static void StopEmotingAtPoints(PlayerVisual __instance, string _animName, int _animLayer)
             {
                 EmoteOverrider extraEmotes = __instance._visualAnimator.GetComponent<EmoteOverrider>();
+                if (extraEmotes == null)
+                {
+                    return;
+                }
+
                 switch (_animLayer)
                 {
                     case 0:
