@@ -18,6 +18,16 @@ namespace AtlyssEmotes
 
         public static ConfigEntry<string>[] emotes { get; private set; }
 
+        public static string[] defaultEmotes =
+        {
+            "Base:Point",
+            "Base:Clap",
+            "Base:Think",
+            "Base:Shrug",
+            "Base:Dance",
+            "Base:Taunt"
+        };
+
         // Start is called before the first frame update
         public static void Awake()
         {
@@ -67,7 +77,7 @@ namespace AtlyssEmotes
                 ConfigDefinition Emotesdefinition = new ConfigDefinition("Strs", "Emote" + i);
 
                 ConfigDescription Emotesdescription = new ConfigDescription("Emote " + i + " in the wheel");
-                emotes[i] = saveFile.Bind(Emotesdefinition, "None", Emotesdescription);
+                emotes[i] = saveFile.Bind(Emotesdefinition, i < defaultEmotes.Length ? defaultEmotes[i] : "None", Emotesdescription);
             }
         }
 
