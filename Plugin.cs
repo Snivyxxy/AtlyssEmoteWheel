@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace AtlyssEmotes;
 
-[BepInPlugin("com.snivyxxy.plugins.atlyssemotes", "Atlyss Emotes", "1.0.3")]
+[BepInPlugin("com.snivyxxy.plugins.atlyssemotes", "Atlyss Emotes", "1.2.0")]
 [BepInDependency("EasySettings")]
 [BepInProcess("ATLYSS.exe")]
 public class Plugin : BaseUnityPlugin
@@ -31,12 +31,15 @@ public class Plugin : BaseUnityPlugin
 
         new Harmony(MyPluginInfo.PLUGIN_GUID).PatchAll();
 
-        EmoteWheelSettings.Awake();
-
         Harmony harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
         harmony.PatchAll(Assembly.GetExecutingAssembly());
 
         AssetHandler.GetAssetBundles();
+
+        AssetHandler.RegisterAllEmotePacks();
+
+        Settings.Awake();
+
     }
 
     [HarmonyPatch]
@@ -58,7 +61,7 @@ public class Plugin : BaseUnityPlugin
                     GameObject mouth = AssetHandler.FetchFromBundle<GameObject>("emotewheel", "LiveMouthReaction");
                     GameObject emoteWheel = AssetHandler.FetchFromBundle<GameObject>("emotewheel", "EmoteWheel");
                     Mouth = Instantiate(mouth, player.gameObject.transform.Find("_Canvas_DynamicPlayerUI"));
-                    Mouth.SetActive(EmoteWheelSettings.Mouth.Value);
+                    Mouth.SetActive(Settings.Mouth.Value);
                     Instantiate(emoteWheel, player.gameObject.transform);
                     Logger.LogInfo("Assets Loaded!");
                 }

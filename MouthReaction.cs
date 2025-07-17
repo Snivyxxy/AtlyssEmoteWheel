@@ -2,39 +2,42 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MouthReaction : MonoBehaviour
+namespace AtlyssEmotes
 {
-    private Image image;
-    float currentTimer;
-    const float timermin = 120;
-    const float timermax = 240;
-    const float disappeartimermin = 2;
-    const float disappeartimermax = 10;
-
-    void Start()
+    public class MouthReaction : MonoBehaviour
     {
-        image = GetComponent<Image>();
-        image.enabled = false;
-        currentTimer = Random.Range(timermin, timermax);
-    }
+        private Image image;
+        float currentTimer;
+        const float timermin = 120;
+        const float timermax = 240;
+        const float disappeartimermin = 2;
+        const float disappeartimermax = 10;
 
-    void Update()
-    {
-        if (currentTimer <= 0f)
+        void Start()
         {
-            image.enabled = !image.enabled;
-            if (image.enabled)
+            image = GetComponent<Image>();
+            image.enabled = false;
+            currentTimer = Random.Range(timermin, timermax);
+        }
+
+        void Update()
+        {
+            if (currentTimer <= 0f)
             {
-                currentTimer = Random.Range(disappeartimermin,disappeartimermax);
+                image.enabled = !image.enabled;
+                if (image.enabled)
+                {
+                    currentTimer = Random.Range(disappeartimermin,disappeartimermax);
+                }
+                else
+                {
+                    currentTimer = Random.Range(timermin,timermax);
+                }
             }
             else
             {
-                currentTimer = Random.Range(timermin,timermax);
+                currentTimer -= Time.deltaTime;
             }
-        }
-        else
-        {
-            currentTimer -= Time.deltaTime;
         }
     }
 }

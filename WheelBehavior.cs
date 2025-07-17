@@ -3,194 +3,217 @@ using UnityEngine;
 using UnityEngine.UI;
 using HarmonyLib;
 using AtlyssEmotes;
+using TMPro;
+using Nessie.ATLYSS.EasySettings.UIElements;
+using System.Collections.Generic;
 
-public class WheelBehavior : MonoBehaviour
+namespace AtlyssEmotes
 {
-    public static WheelBehavior instance;
-    [Header("Emote Icons")]
-    public Image[] EmoteBackgrounds;
-    public Image[] EmoteIcons;
-    public EmoteWheelEmotes Emotes;
-
-    public Sprite EmoteUnselected;
-    public Sprite EmoteSelected;
-
-    public float WheelRadius;
-    public float LerpSpeed;
-
-    [SerializeField]
-    bool InUnityEdtior;
-
-    private Vector2 centeredMousePosition;
-    private float mouseAngle;
-    private float openProgress;
-    private int selectedIndex;
-    private bool active;
-
-    private Canvas canvas;
-    private ChatBehaviour chat;
-
-    void Start()
+    public class WheelBehavior : MonoBehaviour
     {
-        canvas = GetComponent<Canvas>();
-        if(instance == null)
+        public static WheelBehavior instance;
+
+        public WheelConfig Config;
+        public int NumOfEmotes;
+        public GameObject IconPrefab;
+        public float WheelRadius;
+        public float LerpSpeed;
+        public float TextDistance;
+        public TextMeshProUGUI emoteNameText;
+
+        [SerializeField]
+        bool InUnityEdtior;
+
+        private WheelIcon[] Icons;
+        private Vector2 centeredMousePosition;
+        private float mouseAngle;
+        private float openProgress;
+        private int selectedIndex;
+        private bool active;
+
+        private Canvas canvas;
+        private ChatBehaviour chat;
+
+        public void Start()
         {
-            instance = this;
-        }
-        if(!InUnityEdtior)
-        {
-            chat = ChatBehaviour._current;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-        
-        if (active)
-        {
-            
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            CameraFunction._current._unlockedCamera = true;
-
-
-            openProgress = Mathf.Lerp(openProgress, 1f, 1f - Mathf.Pow(1 - (1 / LerpSpeed), Time.deltaTime));
-
-            //get mouse pos relative to center
-            centeredMousePosition = Input.mousePosition - new Vector3(Screen.width / 2, Screen.height / 2);
-
-            //get mouse angle relative to center with 0 radians being pi/6 left to upwards and + radians being clockwise
-            mouseAngle = (2 * Mathf.PI / 3) - Mathf.Atan2(centeredMousePosition.y, centeredMousePosition.x);
-
-            //get mouse angle from 0 to 6, 0 being 0 radians and 6 being 2 radians
-            float normalizedMouseAngle = mouseAngle / (2 * Mathf.PI) * 6;
-            if (normalizedMouseAngle < 0)
+            NumOfEmotes = Settings.NumOfEmotes.Value;
+            if(Config != null)
             {
-                normalizedMouseAngle += 6;
+                Destroy(Config);
             }
+            Config = ScriptableObject.CreateInstance<WheelConfig>();
 
-            selectedIndex = Mathf.FloorToInt(normalizedMouseAngle);
+            Config.list = new List<ScriptableEmote>();
 
 
-            if (Input.GetMouseButtonUp(0))
+            if (Icons != null)
             {
-                Plugin.Logger.LogInfo(EmoteWheelSettings.Mouth.Value);
-                active = false;
-                PlayEmote(selectedIndex);
-                CameraFunction._current._unlockedCamera = false;
-            }
-
-        }
-        else
-        {
-            openProgress = Mathf.Lerp(openProgress, 0f, 1f - Mathf.Pow(1 - (1 / LerpSpeed), Time.deltaTime));
-        }
-
-        if (InUnityEdtior)
-        {
-            if (Input.GetKeyDown(KeyCode.RightBracket))
-            {
-                active = !active;
-            }
-        }
-        else
-        {
-            if (!ChatBehaviour._current._focusedInChat && Input.GetKeyDown(EmoteWheelSettings.EmoteWheelKey.Value) || (active && Input.GetKeyDown(KeyCode.Escape)))
-            {
-                active = !active;
-                //crude, redo
-                if(!active)
+                foreach (WheelIcon icon in Icons)
                 {
-                    CameraFunction._current._unlockedCamera = false;
+                    Destroy(icon.gameObject);
                 }
             }
-            if (SettingsManager._current._isOpen || DialogManager._current._isDialogEnabled || TabMenu._current._isOpen)
+            Icons = new WheelIcon[NumOfEmotes];
+            for (int i = 0; i < NumOfEmotes; i++)
             {
-                active = false;
+                if (EmoteManager.allEmotes.ContainsKey(Settings.emotes[i].Value))
+                {
+                    Config.list.Add(EmoteManager.allEmotes[Settings.emotes[i].Value]);
+                }
+                else
+                {
+                    Config.list.Add(EmoteManager.allEmotes["None"]);
+                }
+                WheelIcon e = Instantiate(IconPrefab, gameObject.transform).GetComponent<WheelIcon>();
+                e.index = i;
+                e.Emote = Config.list[i];
+                Icons[i] = e;
+            }
+
+            if(emoteNameText)
+            {
+                emoteNameText.GetComponent<RectTransform>().position =
+                    GetComponent<RectTransform>().position + TextDistance * Vector3.down;
+            }
+
+            canvas = GetComponent<Canvas>();
+            if (instance == null)
+            {
+                instance = this;
+            }
+            if (!InUnityEdtior)
+            {
+                chat = ChatBehaviour._current;
             }
         }
 
-
-        if (openProgress > 0.1f)
+        // Update is called once per frame
+        void Update()
         {
-            canvas.enabled = true;
-        }
-        else
-        {
-            canvas.enabled = false;
-        }
-
-        for (int i = 0; i < EmoteBackgrounds.Length; i++)
-        {
-            //setactive
-            EmoteBackgrounds[i].gameObject.SetActive(openProgress > 0.1f);
-
-            if (i == selectedIndex)
+            if (active)
             {
-                EmoteBackgrounds[i].sprite = EmoteSelected;
+
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                if(!InUnityEdtior)
+                {
+                    CameraFunction._current._unlockedCamera = true;
+                }
+                
+
+
+                openProgress = Mathf.Lerp(openProgress, 1f, 1 - Mathf.Pow(LerpSpeed, Time.deltaTime));
+
+                //get mouse pos relative to center
+                centeredMousePosition = Input.mousePosition - new Vector3(Screen.width / 2, Screen.height / 2);
+
+                //get mouse angle relative to center with 0 radians being pi/6 left to upwards and + radians being clockwise
+                mouseAngle = (Mathf.PI / 2) + (Mathf.PI / NumOfEmotes)- Mathf.Atan2(centeredMousePosition.y, centeredMousePosition.x);
+
+                //get mouse angle from 0 to 6, 0 being 0 radians and 6 being 2 radians
+                float normalizedMouseAngle = mouseAngle / (2 * Mathf.PI) * NumOfEmotes;
+                if (normalizedMouseAngle < 0)
+                {
+                    normalizedMouseAngle += NumOfEmotes;
+                }
+
+                selectedIndex = Mathf.FloorToInt(normalizedMouseAngle);
+
+
+                if (Input.GetMouseButtonUp(0))
+                {
+                    if(InUnityEdtior)
+                    {
+                        UnityEngine.Debug.Log(selectedIndex);
+                    }
+                    else
+                    {
+                        Plugin.Logger.LogInfo(Settings.Mouth.Value);
+                        active = false;
+                        PlayEmote(selectedIndex);
+                        CameraFunction._current._unlockedCamera = false;
+                    }
+                }
+                emoteNameText.text = Config.list[selectedIndex].emoteName;
             }
             else
             {
-                EmoteBackgrounds[i].sprite = EmoteUnselected;
+                openProgress = Mathf.Lerp(openProgress, 0f, 1 - Mathf.Pow(LerpSpeed, Time.deltaTime));
             }
 
-            EmoteBackgrounds[i].transform.localPosition = new Vector2(openProgress * WheelRadius * Mathf.Sin(i * Mathf.PI / 3),
-                                                                      openProgress * WheelRadius * Mathf.Cos(i * Mathf.PI / 3));
-
-            if (active)
+            if (InUnityEdtior)
             {
-                EmoteIcons[i].sprite = Emotes.list[i].icon;
-            }
-        }
-
-
-    }
-
-
-    void PlayEmote(int index)
-    {
-        if (InUnityEdtior)
-        {
-            Debug.Log(Emotes.list[index].emoteString);
-        }
-        else if(chat._emoteBuffer <= 0f)
-        {
-            //rework
-            EmoteCommand foundEmote = null;
-
-            foreach(EmoteCommand e in chat._scriptableEmoteList._emoteCommandList)
-            {
-                if (Emotes.list[index].emoteString == e._emoteChatCommand)
+                if (Input.GetKeyDown(KeyCode.RightBracket))
                 {
-                    foundEmote = e;
-                    break;
+                    active = !active;
+                }
+            }
+            else
+            {
+                if (!ChatBehaviour._current._focusedInChat && Input.GetKeyDown(Settings.EmoteWheelKey.Value) || (active && Input.GetKeyDown(KeyCode.Escape)))
+                {
+                    active = !active;
+                    //crude, redo
+                    if (!active)
+                    {
+                        CameraFunction._current._unlockedCamera = false;
+                    }
+                }
+                if (SettingsManager._current._isOpen || DialogManager._current._isDialogEnabled || TabMenu._current._isOpen)
+                {
+                    active = false;
                 }
             }
 
-            if(foundEmote == null)
+            canvas.enabled = openProgress > 0.1f;
+
+            foreach (WheelIcon ei in Icons)
             {
-                return;
+                ei.selected = (ei.index == selectedIndex);
+                ei.GetComponent<RectTransform>().anchoredPosition = new Vector2(Mathf.Sin(ei.index * 2 * Mathf.PI / NumOfEmotes),
+                                                                                Mathf.Cos(ei.index * 2 * Mathf.PI / NumOfEmotes)) * openProgress * WheelRadius;
             }
-
-            chat._player._pVisual.Cmd_CrossFadeAnim(foundEmote._emoteAnimationTag, 0.1f, 11);
-            chat._emoteBuffer = 0.85f;
-        }
-    }
-
-    //crude. Fix later.
-    [HarmonyPatch]
-    class Patches
-    {
-        [HarmonyPatch(typeof(PlayerCombat), "<Init_Attack>g__AbleToInitAttack|101_0")]
-        [HarmonyPostfix]
-        static void PatchCanAttack(ref bool __result)
-        {
+            emoteNameText.color = new Color(emoteNameText.color.r,
+                                            emoteNameText.color.g,
+                                            emoteNameText.color.b,
+                                            openProgress);
             
-            if(WheelBehavior.instance != null && WheelBehavior.instance.active)
+
+        }
+
+
+        void PlayEmote(int index)
+        {
+            if (InUnityEdtior)
             {
-                __result = false;
+                Debug.Log(Config.list[index].emoteID);
+            }
+            else if (chat._emoteBuffer <= 0f)
+            {
+                string id = Config.list[index].isVanilla ? Config.list[index].emoteID : Config.list[index].GetName();
+
+
+                
+                chat._player._pVisual.Cmd_CrossFadeAnim(id, 0.1f, 11);
+                chat._player._pVisual.Local_CrossFadeAnim(id, 0.1f, 11);
+                chat._emoteBuffer = 0.85f;
+            }
+        }
+
+
+
+        [HarmonyPatch]
+        class Patches
+        {
+            [HarmonyPatch(typeof(PlayerCombat), "<Init_Attack>g__AbleToInitAttack|101_0")]
+            [HarmonyPostfix]
+            static void PatchCanAttack(ref bool __result)
+            {
+
+                if (WheelBehavior.instance != null && WheelBehavior.instance.active)
+                {
+                    __result = false;
+                }
             }
         }
     }
