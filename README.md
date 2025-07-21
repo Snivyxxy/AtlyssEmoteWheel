@@ -5,8 +5,7 @@ A mod that adds an emote wheel to Atlyss.
 Put the AtlyssEmotes folder into the Bepinex Plugins folder.
 
 ## Todo
-- Add support for custom emotes
-- Allow rearrangement of the wheel's emotes
+- Figure out a good solution to putting assets on github
 - Add controller support
 
 ## Where's the Usable Mod?
