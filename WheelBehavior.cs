@@ -6,6 +6,8 @@ using AtlyssEmotes;
 using TMPro;
 using Nessie.ATLYSS.EasySettings.UIElements;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace AtlyssEmotes
 {
@@ -201,11 +203,10 @@ namespace AtlyssEmotes
         }
 
 
-
         [HarmonyPatch]
         class Patches
         {
-            [HarmonyPatch(typeof(PlayerCombat), "<Init_Attack>g__AbleToInitAttack|101_0")]
+            [HarmonyPatch(typeof(PlayerCombat), "<Init_Attack>g__AbleToInitAttack|102_0")]
             [HarmonyPostfix]
             static void PatchCanAttack(ref bool __result)
             {

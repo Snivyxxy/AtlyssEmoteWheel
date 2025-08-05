@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\account\\OneDrive\\Desktop\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj": {}
+    "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\account\\OneDrive\\Desktop\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj": {
+    "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\account\\OneDrive\\Desktop\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
+        "projectUniqueName": "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
         "projectName": "AtlyssEmotes",
-        "projectPath": "C:\\Users\\account\\OneDrive\\Desktop\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
+        "projectPath": "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
         "packagesPath": "C:\\Users\\account\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\account\\OneDrive\\Desktop\\AtlyssEmotes\\AtlyssEmotes\\obj\\",
+        "outputPath": "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\account\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,6 +47,11 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.*, )"
+            },
+            "BepInEx.AssemblyPublicizer.MSBuild": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[0.4.2, )"
             },
             "BepInEx.Core": {
               "target": "Package",
