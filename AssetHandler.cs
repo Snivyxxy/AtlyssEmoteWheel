@@ -23,17 +23,39 @@ namespace AtlyssEmotes
             Plugin.Logger.LogInfo("Loading Base EmotePack");
             EmoteManager.RegisterEmotePackage(FetchFromBundle<EmotePackage>("emotewheel", "BasePack"));
             Plugin.Logger.LogInfo("Base EmotePack Loaded!");
-            if(!Directory.Exists(Utilities.EmotePath))
-            {
-                Directory.CreateDirectory(Utilities.EmotePath);
-            }
+            Plugin.Logger.LogInfo("Finding Other EmotePacks...");
+            AssetHandler.RegisterAllInPath(Utilities.pluginsFolder);
+        }
+        
+        public static void RegisterEmotePacksInPath(string path)
+        {
+            Plugin.Logger.LogInfo("Loading EmotePacks at Path: " + path);
 
-            foreach (string s in Directory.GetFiles(Utilities.EmotePath))
+            
+
+            foreach (string s in Directory.GetFiles(path))
             {
                 RegisterEmotePack(s);
             }
-            Plugin.Logger.LogInfo("All EmotePacks Loaded!");
+            Plugin.Logger.LogInfo("EmotePacks in path: " + path + " Loaded!");
         }
+        
+
+        public static void RegisterAllInPath(string path)
+        {
+            foreach(string s in Directory.GetDirectories(path))
+            {
+                if (Path.GetFileName(s).Equals(Utilities.EmoteDirectoryName))
+                {
+                    RegisterEmotePacksInPath(Path.Combine(path, Utilities.EmoteDirectoryName));
+                }
+                else
+                {
+                    RegisterAllInPath(s);
+                }
+            }
+        }
+
 
         public static void RegisterEmotePack(string bundlepath)
         {

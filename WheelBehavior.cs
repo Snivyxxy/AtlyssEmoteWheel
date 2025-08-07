@@ -74,8 +74,7 @@ namespace AtlyssEmotes
 
             if(emoteNameText)
             {
-                emoteNameText.GetComponent<RectTransform>().position =
-                    GetComponent<RectTransform>().position + TextDistance * Vector3.down;
+                emoteNameText.GetComponent<RectTransform>().anchoredPosition = TextDistance * Vector2.up;
             }
 
             canvas = GetComponent<Canvas>();

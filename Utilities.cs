@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using BepInEx;
+using System.IO;
 using System.Reflection;
 
 namespace AtlyssEmotes
@@ -6,6 +7,9 @@ namespace AtlyssEmotes
     public static class Utilities
     {
         public static string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-        public static string EmotePath = Path.Combine(path,"EmotePackages");
+        //old.
+        //public static string EmotePath = Path.Combine(path,"..", "EmotePackages");
+        public static string pluginsFolder = BepInEx.Paths.PluginPath;
+        public static string EmoteDirectoryName = "EmotePackages";
     }
 }

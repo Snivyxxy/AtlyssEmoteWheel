@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace AtlyssEmotes;
 
-[BepInPlugin("com.snivyxxy.plugins.atlyssemotes", "Atlyss Emotes", "1.2.0")]
+[BepInPlugin("com.snivyxxy.plugins.atlyssemotes", "Atlyss Emotes", "1.3.1")]
 [BepInDependency("EasySettings")]
 [BepInProcess("ATLYSS.exe")]
 public class Plugin : BaseUnityPlugin
