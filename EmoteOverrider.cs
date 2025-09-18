@@ -128,21 +128,21 @@ namespace AtlyssEmotes
                 
                 HandleWeights();
 
-                if (initPlayable.IsValid())
+                if (initPlayable.IsValid()) //If Init Playable Is Active
                 {
+                    //Get InitPlayable's Normalized Time
                     double normalizedTime = GetNormalizedTime(initPlayable);
+                    //If Loop Emote Isn't Null
+                    //and Normalized Time is greater than the Emote End
                     if (emote.loop != null &&
                        normalizedTime >= (emote.ExitTime - emote.TransitionOffset) &&
-                       GetNormalizedTime(initPlayable, true) < emote.ExitTime)
+                       !loopPlayable.IsValid())
                     {
                         Play(emote.loop, true);
                     }
-                    else if (emote.loop == null)
+                    else if (emote.loop == null && initPlayable.IsDone())
                     {
-                        if (initPlayable.IsDone())
-                        {
-                            Stop();
-                        }
+                        Stop();
                     }
                 }
             }
@@ -179,23 +179,26 @@ namespace AtlyssEmotes
                 loopWeight = 1f;
                 initWeight = 0f;
             }
-
-            else
+            else //init is not null here.
             {
                 //Crossfade Handler
-                if (normalizedTime < emote.ExitTime) //if before crossfade time
+                if (normalizedTime < emote.ExitTime) //if init animation's time is before crossfade time
                 {
                     initWeight = 1f;
                     loopWeight = 0f;
                 }
-                else if (normalizedTime > emote.ExitTime + emote.TransitionDuration) //if after crossfade time
+                else if (normalizedTime > emote.ExitTime + emote.TransitionDuration) //if init animation's time is after crossfade time
                 {
                     initWeight = 0f;
                     loopWeight = 1f;
                 }
-                else
+                else //If init animation's time is between crossfade time
                 {
-                    loopWeight = (float)((normalizedTime - emote.ExitTime) / emote.TransitionDuration);
+                    //transition Loopweight from 0 to 1 over Transition duration
+                    //0 is when normalized time is exittime
+                    //1 is when normalized time is exittime + transition duration
+                    loopWeight = (float)((normalizedTime - emote.ExitTime) / emote.TransitionDuration); 
+                    
                     initWeight = (float)(1f - loopWeight);
                 }
                 //Check Crossfade in NonLoopings
@@ -207,10 +210,19 @@ namespace AtlyssEmotes
                 }
 
             }
-
+            
             channelmixer.SetInputWeight(0, initWeight * emoteWeight);
             channelmixer.SetInputWeight(1, loopWeight * emoteWeight);
             //channelmixer.SetInputWeight(2, 1f - emoteWeight);
+            /*
+            Plugin.Logger.LogInfo("Init  Weight:" + initWeight);
+            Plugin.Logger.LogInfo("Loop  Weight:" + loopWeight);
+            Plugin.Logger.LogInfo("Emote Weight:" + emoteWeight);
+            Plugin.Logger.LogInfo("Loop  Valid :" + loopPlayable.IsValid());
+            Plugin.Logger.LogInfo("Emote Valid :" + initPlayable.IsValid());
+            */
+
+
 
         }
 

@@ -1,0 +1,244 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\atlyssemotes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:atlyssemotes.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\wheelbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:wheelbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\emoteoverrider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:emoteoverrider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\assethandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:assethandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:utilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\emotemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:emotemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\emotepackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:emotepackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\scriptableemote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:scriptableemote.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\mouthreaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:mouthreaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\wheelicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:wheelicon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|c:\\users\\wynter\\desktop\\game mods\\atlyss\\atlyssemotes\\atlyssemotes\\wheelconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B10686E5-DD1F-49AD-B30A-451AA4A11F5C}|AtlyssEmotes.csproj|solutionrelative:wheelconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AtlyssEmotes.csproj",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
+              "RelativeDocumentMoniker": "AtlyssEmotes.csproj",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
+              "RelativeToolTip": "AtlyssEmotes.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-18T19:01:45.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WheelBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\WheelBehavior.cs",
+              "RelativeDocumentMoniker": "WheelBehavior.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\WheelBehavior.cs",
+              "RelativeToolTip": "WheelBehavior.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAASwMUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssetHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AssetHandler.cs",
+              "RelativeDocumentMoniker": "AssetHandler.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AssetHandler.cs",
+              "RelativeToolTip": "AssetHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmoteOverrider.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\EmoteOverrider.cs",
+              "RelativeDocumentMoniker": "EmoteOverrider.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\EmoteOverrider.cs",
+              "RelativeToolTip": "EmoteOverrider.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAuwHwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\Plugin.cs",
+              "RelativeDocumentMoniker": "Plugin.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\Plugin.cs",
+              "RelativeToolTip": "Plugin.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmotePackage.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\EmotePackage.cs",
+              "RelativeDocumentMoniker": "EmotePackage.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\EmotePackage.cs",
+              "RelativeToolTip": "EmotePackage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Utilities.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\Utilities.cs",
+              "RelativeDocumentMoniker": "Utilities.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\Utilities.cs",
+              "RelativeToolTip": "Utilities.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmoteManager.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\EmoteManager.cs",
+              "RelativeDocumentMoniker": "EmoteManager.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\EmoteManager.cs",
+              "RelativeToolTip": "EmoteManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAACQJAAAAAAAAAABBwDsJAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-08-05T05:26:33.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ScriptableEmote.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\ScriptableEmote.cs",
+              "RelativeDocumentMoniker": "ScriptableEmote.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\ScriptableEmote.cs",
+              "RelativeToolTip": "ScriptableEmote.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MouthReaction.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\MouthReaction.cs",
+              "RelativeDocumentMoniker": "MouthReaction.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\MouthReaction.cs",
+              "RelativeToolTip": "MouthReaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WheelIcon.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\WheelIcon.cs",
+              "RelativeDocumentMoniker": "WheelIcon.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\WheelIcon.cs",
+              "RelativeToolTip": "WheelIcon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WheelConfig.cs",
+              "DocumentMoniker": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\WheelConfig.cs",
+              "RelativeDocumentMoniker": "WheelConfig.cs",
+              "ToolTip": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\WheelConfig.cs",
+              "RelativeToolTip": "WheelConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T19:01:45.82Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

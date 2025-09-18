@@ -5,7 +5,7 @@
       "BepInEx.Analyzers/1.0.8": {
         "type": "package"
       },
-      "BepInEx.AssemblyPublicizer.MSBuild/0.4.2": {
+      "BepInEx.AssemblyPublicizer.MSBuild/0.4.3": {
         "type": "package",
         "compile": {
           "lib/net472/AsmResolver.DotNet.dll": {},
@@ -255,14 +255,14 @@
         "tools/uninstall.ps1"
       ]
     },
-    "BepInEx.AssemblyPublicizer.MSBuild/0.4.2": {
-      "sha512": "AwGR6zOQxhWPWmcMdmhCaawC2qYdYHttkGmlXxyvhB1EIUAtuILEle8kKSkzElnbFGZjvw6iabpFi+AYUG4IuA==",
+    "BepInEx.AssemblyPublicizer.MSBuild/0.4.3": {
+      "sha512": "Z8Qs3JTTHZG1q0DCqY+HFJ8xp92tkEXWyQ7roeWgUvn20tjv0ZNfAdyy13XrRS1jeEoN/weJc81747TbvvwaDg==",
       "type": "package",
-      "path": "bepinex.assemblypublicizer.msbuild/0.4.2",
+      "path": "bepinex.assemblypublicizer.msbuild/0.4.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bepinex.assemblypublicizer.msbuild.0.4.2.nupkg.sha512",
+        "bepinex.assemblypublicizer.msbuild.0.4.3.nupkg.sha512",
         "bepinex.assemblypublicizer.msbuild.nuspec",
         "build/BepInEx.AssemblyPublicizer.MSBuild.props",
         "contentFiles/cs/any/IgnoresAccessChecksToAttribute.cs",
@@ -1007,7 +1007,7 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "BepInEx.Analyzers >= 1.*",
-      "BepInEx.AssemblyPublicizer.MSBuild >= 0.4.2",
+      "BepInEx.AssemblyPublicizer.MSBuild >= 0.4.3",
       "BepInEx.Core >= 5.*",
       "BepInEx.PluginInfoProps >= 2.*",
       "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.2",
@@ -1015,19 +1015,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\account\\.nuget\\packages\\": {}
+    "C:\\Users\\Wynter\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
+      "projectUniqueName": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
       "projectName": "AtlyssEmotes",
-      "projectPath": "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
-      "packagesPath": "C:\\Users\\account\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\account\\OneDrive\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\obj\\",
+      "projectPath": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\AtlyssEmotes.csproj",
+      "packagesPath": "C:\\Users\\Wynter\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Wynter\\Desktop\\Game Mods\\Atlyss\\AtlyssEmotes\\AtlyssEmotes\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\account\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Wynter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1050,7 +1055,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net472": {
@@ -1064,7 +1075,7 @@
           "BepInEx.AssemblyPublicizer.MSBuild": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[0.4.2, )"
+            "version": "[0.4.3, )"
           },
           "BepInEx.Core": {
             "target": "Package",
@@ -1085,7 +1096,7 @@
             "version": "[2021.3.16, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,3 +1,8 @@
 is_global = true
 build_property.RootNamespace = AtlyssEmotes
-build_property.ProjectDir = C:\Users\account\OneDrive\Desktop\Game Mods\Atlyss\AtlyssEmotes\AtlyssEmotes\
+build_property.ProjectDir = C:\Users\Wynter\Desktop\Game Mods\Atlyss\AtlyssEmotes\AtlyssEmotes\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

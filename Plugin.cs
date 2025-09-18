@@ -18,7 +18,12 @@ public class Plugin : BaseUnityPlugin
 
     public static GameObject Mouth;
 
-
+    public static class MyPluginInfo
+    {
+        public const string PLUGIN_GUID = "AtlyssEmotes";
+        public const string PLUGIN_NAME = "AtlyssEmotes";
+        public const string PLUGIN_VERSION = "1.0.0";
+    }
 
     private void Awake()
     {
