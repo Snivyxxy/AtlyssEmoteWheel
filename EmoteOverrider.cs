@@ -135,8 +135,8 @@ namespace AtlyssEmotes
                     //If Loop Emote Isn't Null
                     //and Normalized Time is greater than the Emote End
                     if (emote.loop != null &&
-                       normalizedTime >= (emote.ExitTime - emote.TransitionOffset) &&
-                       !loopPlayable.IsValid())
+                        normalizedTime >= Mathf.Clamp(emote.ExitTime - emote.TransitionOffset, 0, 1) &&
+                        !loopPlayable.IsValid())
                     {
                         Play(emote.loop, true);
                     }
@@ -181,16 +181,18 @@ namespace AtlyssEmotes
             }
             else //init is not null here.
             {
+                bool loopPlaysThisFrame = false;
                 //Crossfade Handler
                 if (normalizedTime < emote.ExitTime) //if init animation's time is before crossfade time
                 {
                     initWeight = 1f;
                     loopWeight = 0f;
                 }
-                else if (normalizedTime > emote.ExitTime + emote.TransitionDuration) //if init animation's time is after crossfade time
+                else if (normalizedTime >= Mathf.Clamp(emote.ExitTime + emote.TransitionDuration, 0, 1)) //if init animation's time is after crossfade time Or init is finished.
                 {
                     initWeight = 0f;
                     loopWeight = 1f;
+                    loopPlaysThisFrame = true;
                 }
                 else //If init animation's time is between crossfade time
                 {
@@ -202,7 +204,7 @@ namespace AtlyssEmotes
                     initWeight = (float)(1f - loopWeight);
                 }
                 //Check Crossfade in NonLoopings
-                if (!loopPlayable.IsValid())
+                if (!(loopPlayable.IsValid() || loopPlaysThisFrame))
                 {
                     emoteWeight = initWeight;
                     initWeight = 1f;
@@ -220,8 +222,8 @@ namespace AtlyssEmotes
             Plugin.Logger.LogInfo("Emote Weight:" + emoteWeight);
             Plugin.Logger.LogInfo("Loop  Valid :" + loopPlayable.IsValid());
             Plugin.Logger.LogInfo("Emote Valid :" + initPlayable.IsValid());
+            Plugin.Logger.LogInfo("ClipTime    :" + normalizedTime);
             */
-
 
 
         }

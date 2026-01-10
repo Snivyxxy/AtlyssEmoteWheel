@@ -13,6 +13,8 @@ namespace AtlyssEmotes
 {
     public class WheelBehavior : MonoBehaviour
     {
+        
+
         public static WheelBehavior instance;
 
         public WheelConfig Config;
@@ -205,8 +207,11 @@ namespace AtlyssEmotes
         [HarmonyPatch]
         class Patches
         {
-            [HarmonyPatch(typeof(PlayerCombat), "<Init_Attack>g__AbleToInitAttack|102_0")]
-            [HarmonyPostfix]
+            static MethodInfo TargetMethod() =>
+            AccessTools.FirstMethod(
+                typeof(PlayerCombat),
+                x => x.Name.Contains("AbleToInitAttack")
+                );
             static void PatchCanAttack(ref bool __result)
             {
 
